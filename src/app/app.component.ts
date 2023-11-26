@@ -13,18 +13,26 @@ export class AppComponent implements OnInit{
   constructor(){}
   
   docNameChange(element){
-    console.log(element.target.value.length);
+    if (element.target.value.length>1 &&  element.target.value.length<129) {
+      console.log(element.target.value);
+    }
   }
   emailChange(element){
-    console.log(element.target.value.length);
+    if (element.target.value.match(/^[a-z\d]+@[a-z\d]+(?:\.[a-z\d]+)+$/)) {
+      console.log(element.target.value);
+    }
   }
 
   categoryChange(element){
-    console.log(element.target.value);
+    if (element.target.value != '') {
+      console.log(element.target.value);
+    }
   }
 
   docTypeChange(element){
-    console.log(element.target.value);
+    if (element.target.value != '') {
+      console.log(element.target.value);
+    }
   }
   ngOnInit(): void {
     
