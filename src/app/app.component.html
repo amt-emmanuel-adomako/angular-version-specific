@@ -3,15 +3,15 @@
   <div class="form-progress-bar"></div>
 </div>
 <div class="documents">
-  <input type="text" id="documentName">
-  <select name="doctype" id="documentType">
+  <input (change)="docNameChange($event)" type="text" id="documentName">
+  <select (change)="docTypeChange($event)" name="doctype" id="documentType">
     <option value="" selected></option>
     <option value="Plain">Plain</option>
     <option value="PDF">PDF</option>
   </select>
 
-  <input type="email" id="email">
-  <select name="cat" id="category">
+  <input (change)="emailChange($event)" type="email" id="email">
+  <select (change)="categoryChange($event)" name="cat" id="category">
     <option value="" selected></option>
     <option value="Audit">Audit</option>
     <option value="Application">Application</option>
